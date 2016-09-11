@@ -1,24 +1,3 @@
-# README
+Have you ever had a time you are talking to your love ones on the phone right before they are flying? and wanted to send them a gift during flight?
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Airup not only allows the passenger to make in flight purchase, it also allows your friends/family to purchase you a gift during your flight.

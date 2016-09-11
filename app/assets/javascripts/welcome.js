@@ -98,20 +98,10 @@ window.onload = function() {
     // debugger
     var name = $(this.parentElement).children("h1").text();
     var price = $(this.parentElement).children("h2").text();
-    $('tbody').append('<tr><td>' + name + '</td><th>&nbsp;</th><th>&nbsp;</th><td>' + price + '</td></tr>')
+    $('tbody').pre
+    pend('<tr><td>' + name + '</td><th>&nbsp;</th><th>&nbsp;</th><td>' + price + '</td></tr>')
 
     })
 
 
-  $(window).scroll(function(e){
-  var $el = $('.fixedElement');
-  var isPositionFixed = ($el.css('position') == 'fixed');
-  if ($(this).scrollTop() > 200 && !isPositionFixed){
-    $('.fixedElement').css({'position': 'fixed', 'top': '0px'});
-  }
-  if ($(this).scrollTop() < 200 && isPositionFixed)
-  {
-    $('.fixedElement').css({'position': 'static', 'top': '0px'});
-  }
-});
 }
