@@ -116,7 +116,7 @@ window.onload = function() {
 
     function addToTotal(newAmount) {
     	total += newAmount;
-    	$('#total-amount').html(`$${total}.00`)
+    	$('.total-amount').html(`Total: $${total}.00`)
     }
 
   $(window).scroll(function(e){
