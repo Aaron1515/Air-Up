@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'api/index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'api/list', to: 'api#list'
 
   root to: "welcome#index"
   resources :welcome
