@@ -3,4 +3,8 @@ class ApiController < ApplicationController
 
   end
 
+  def list
+
+  end
+
 end
