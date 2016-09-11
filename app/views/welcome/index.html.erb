@@ -42,17 +42,17 @@
     </div>
   </form>
 
-  <form class="col-md-6">
+  <form class="col-md-6" action="/welcome" method="post">
     <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-2 col-form-label">Flight #</label>
+      <label for="flight_number" class="col-sm-2 col-form-label">Flight #</label>
       <div class="col-sm-10">
-        <input type="email" class="form-control" id="inputEmail3" placeholder="123456789">
+        <input type="text" class="form-control" name="flight_number" placeholder="123456789">
       </div>
     </div>
     <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-2 col-form-label">Name</label>
+      <label for="passenger_name" class="col-sm-2 col-form-label">Name</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Name of passenger">
+        <input type="text" class="form-control" name="passenger_name" placeholder="Name of passenger">
       </div>
     </div>
     <div class="form-group row">
