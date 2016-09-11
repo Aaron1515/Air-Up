@@ -1,6 +1,7 @@
 window.onload = function() {
 
-    var mapLayer = MQ.mapLayer(), map;
+    var mapLayer = MQ.mapLayer(), map, total = 0;
+
     map = L.map('map', {
         layers: mapLayer,
         center: [ 33.6761901, -117.8696646 ],
@@ -93,25 +94,40 @@ window.onload = function() {
 
     listProducts();
 
-
     $('button').click(function(){
-    // debugger
-    var name = $(this.parentElement).children("h1").text();
-    var price = $(this.parentElement).children("h2").text();
-    $('tbody').append('<tr><td>' + name + '</td><th>&nbsp;</th><th>&nbsp;</th><td>' + price + '</td></tr>')
-
+	    var name = $(this.parentElement).children("h1").text();
+	    var price = $(this.parentElement).children("h2").text();
+	    convertStringToNum(price, total);
+	    $('tbody').append('<tr><td>' + name + '</td><th>&nbsp;</th><th>&nbsp;</th><td>' + price + '</td></tr>')
     })
 
+    function convertStringToNum(str) {
+    	var arr = str.split(''), num = '';
+
+    	for (var i = 0; i < arr.length; i++) {
+    		if (arr[i] === '.') {
+    			addToTotal(Number(num));
+    			return;
+    		} else if (arr[i] !== '$') {
+    			num += arr[i];
+    		}  
+    	}
+    }
+
+    function addToTotal(newAmount) {
+    	total += newAmount;
+    	$('.total-amount').html(`Total: $${total}.00`)
+    }
 
   $(window).scroll(function(e){
-  var $el = $('.fixedElement');
-  var isPositionFixed = ($el.css('position') == 'fixed');
-  if ($(this).scrollTop() > 200 && !isPositionFixed){
-    $('.fixedElement').css({'position': 'fixed', 'top': '0px'});
-  }
-  if ($(this).scrollTop() < 200 && isPositionFixed)
-  {
-    $('.fixedElement').css({'position': 'static', 'top': '0px'});
-  }
-});
+	  var $el = $('.fixedElement');
+	  var isPositionFixed = ($el.css('position') == 'fixed');
+	  if ($(this).scrollTop() > 200 && !isPositionFixed){
+	    $('.fixedElement').css({'position': 'fixed', 'top': '0px'});
+	  }
+	  if ($(this).scrollTop() < 200 && isPositionFixed)
+	  {
+	    $('.fixedElement').css({'position': 'static', 'top': '0px'});
+	  }
+	});
 }
