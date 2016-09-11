@@ -90,4 +90,5 @@ window.onload = function() {
     }
 
     listProducts();
+
 }
