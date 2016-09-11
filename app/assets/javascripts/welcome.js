@@ -1,10 +1,10 @@
 window.onload = function() {
     var mapLayer = MQ.mapLayer(), map;
-    var product = { 	
+    var product = {
     	name: '',
     	image: '',
     	description: '',
-    	price: ''	
+    	price: ''
     };
 
     var productNames = [
@@ -55,11 +55,11 @@ window.onload = function() {
    			 } else {
       			$('.person-found').append(
       				`<strong>Success!</strong>
-      				${person.pii.first_name} 
-      				${person.pii.last_name} 
-      				on flight ${person.travel_info.current_flight.flight_number} 
-      				from ${person.travel_info.current_flight.origin} 
-      				to ${person.travel_info.current_flight.destination} 
+      				${person.pii.first_name}
+      				${person.pii.last_name}
+      				on flight ${person.travel_info.current_flight.flight_number}
+      				from ${person.travel_info.current_flight.origin}
+      				to ${person.travel_info.current_flight.destination}
       				is found!`)
     		}
   		});
@@ -67,7 +67,7 @@ window.onload = function() {
 
     map = L.map('map', {
         layers: mapLayer,
-        center: [ 37.6213129, -122.3811441 ],
+        center: [ 33.6761901, -117.8696646 ],
         zoom:15
     });
 
